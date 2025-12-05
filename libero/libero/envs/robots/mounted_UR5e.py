@@ -16,7 +16,7 @@ class MountedUR5e(ManipulatorModel):
 
         # Set joint damping
         self.set_joint_attribute(
-            attrib="damping", values=np.array((0.1, 0.1, 0.1, 0.1, 0.1, 0.01, 0.01))
+            attrib="damping", values=np.array((0.1, 0.1, 0.1, 0.1, 0.01, 0.01))
         )
 
     @property
@@ -30,11 +30,11 @@ class MountedUR5e(ManipulatorModel):
     @property
     def default_controller_config(self):
         return "default_ur5e"
-    
+
     @property
     def init_qpos(self):
         return np.array(
-            [0, -1.61037389e-01, 0.00, -2.44459747e00, 0.00, 2.22675220e00, np.pi / 4]
+            [0, -1.61037389e-01, 0.00, -2.44459747e00, 2.22675220e00, np.pi / 4]
         )
 
     @property
